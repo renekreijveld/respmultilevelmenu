@@ -10,8 +10,13 @@ The module has the defaule menu parameters which are the same as the original Me
 Additionally, you can set the following parameters:
 
 Back text: the text to appear on the "back" menu item when navigating into submenu's.
+
 Color Set: choose one of the 5 predefined color sets. Or choose "Use your own".
+
 Color1: when you choose "Use your own" as color set, choose your first color here. This color is used as the button color.
+
 Color2: when you choose "Use your own" as color set, choose your second color here. This color is used as the button hover color.
+
 Animation: choose one of the five animations.
+
 Load jQuery: specify if the module should load jQuery (from the Google API's). If your template already loads jQuery, set this parameter to "No".
