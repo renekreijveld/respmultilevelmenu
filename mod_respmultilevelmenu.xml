@@ -11,7 +11,7 @@
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>email@renekreijveld.nl</authorEmail>
 	<authorUrl>about.me/renekreijveld</authorUrl>
-	<version>0.0.1</version>
+	<version>0.0.2</version>
 	<description>Respsonsive Multi Level Menu</description>
 	<files>
 		<filename module="mod_respmultilevelmenu">mod_respmultilevelmenu.php</filename>

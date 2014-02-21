@@ -72,6 +72,24 @@ foreach ($list as $i => &$item)
 	if ($item->deeper)
 	{
 		echo '<ul class="dl-submenu">';
+		// The javascript code prevents a menu item that has subitems to be clickable.
+		// When clicked on such a parent item, the javascript displays the submenu and doesn't execute the link connected to the parent item.
+		// To fix this, let's clone the parent item as the first item in the submenu.
+		echo '<li>';
+		// Render the menu item.
+		switch ($item->type) :
+			case 'separator':
+			case 'url':
+			case 'component':
+			case 'heading':
+				require JModuleHelper::getLayoutPath('mod_menu', 'default_' . $item->type);
+				break;
+
+			default:
+				require JModuleHelper::getLayoutPath('mod_menu', 'default_url');
+				break;
+		endswitch;
+		echo '</li>';
 	}
 	elseif ($item->shallower)
 	{
