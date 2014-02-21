@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.1"
+	client="site"
+	method="upgrade">
+	<name>Responsive Multi Level Menu</name>
+	<author>Rene Kreijveld</author>
+	<creationDate>Februari 2014</creationDate>
+	<copyright>Copyright (C) ReneKreijveld.nl All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>email@renekreijveld.nl</authorEmail>
+	<authorUrl>about.me/renekreijveld</authorUrl>
+	<version>0.0.1</version>
+	<description>Respsonsive Multi Level Menu</description>
+	<files>
+		<filename module="mod_respmultilevelmenu">mod_respmultilevelmenu.php</filename>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_respmultilevelmenu.xml</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="menutype"
+					type="menu"
+					label="Select Menu"
+					description="Select a menu from the list" />
+				<field
+					name="base"
+					type="menuitem"
+					label="Base Item"
+					description="Select a menu item to always be used as the base for the menu display. You must set the Start Level to the same level or higher than the level of the base item. This will cause the module to be displayed on all assigned pages. If Current is selected the currently active item is used as the base. This causes the module to only display when the parent menu item is active."
+					>
+					<option value="">JCURRENT</option>
+				</field>
+				<field
+					name="startLevel"
+					type="list"
+					default="1"
+					label="Start Level"
+					description="Level to start rendering the menu at. Setting the start and end levels to the same # and setting 'Show Sub-menu Items' to yes will only display that single level."
+				>
+					<option value="1">J1</option>
+					<option value="2">J2</option>
+					<option value="3">J3</option>
+					<option value="4">J4</option>
+					<option value="5">J5</option>
+					<option value="6">J6</option>
+					<option value="7">J7</option>
+					<option value="8">J8</option>
+					<option value="9">J9</option>
+					<option value="10">J10</option>
+				</field>
+
+				<field
+					name="endLevel"
+					type="list"
+					default="0"
+					label="End Level"
+					description="Level to stop rendering the menu at. If you choose 'All', all levels will be shown depending on 'Show Sub-menu Items' setting."
+					>
+					<option value="0">JALL</option>
+					<option value="1">J1</option>
+					<option value="2">J2</option>
+					<option value="3">J3</option>
+					<option value="4">J4</option>
+					<option value="5">J5</option>
+					<option value="6">J6</option>
+					<option value="7">J7</option>
+					<option value="8">J8</option>
+					<option value="9">J9</option>
+					<option value="10">J10</option>
+				</field>
+
+				<field
+					name="showAllChildren"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="Show Sub-menu Items"
+					description="Expand the menu and make its sub-menu items always visible.">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field
+					name="backText"
+					type="text"
+					label="Back text"
+					default="back"
+					description="Text to display for the 'back' menu item." />
+
+				<field
+					name="colorSet"
+					type="list"
+					default="1"
+					label="Color Set"
+					description="Select a color set for your menu."
+				>
+					<option value="1">Aubergine</option>
+					<option value="2">Orange</option>
+					<option value="3">Lime</option>
+					<option value="4">Green</option>
+					<option value="5">Purple</option>
+					<option value="0">Use your own</option>
+				</field>
+
+				<field
+					name="color1"
+					type="text"
+					label="Color1"
+					default="#30a7ec"
+					description="Color 1 for the menu, button color" />
+
+				<field
+					name="color2"
+					type="text"
+					label="Color2"
+					default="#2074a5"
+					description="Color 2 for the menu, button hover color" />
+
+				<field
+					name="Animation"
+					type="list"
+					default="1"
+					label="Animation"
+					description="Select an animation type for the menu."
+				>
+					<option value="1">Slide-in right</option>
+					<option value="2">Slide-out left </option>
+					<option value="3">Move down</option>
+					<option value="4">Scale-up back</option>
+					<option value="5">Scale-down front</option>
+				</field>
+
+				<field
+					name="loadjQuery"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="Load jQuery"
+					description="Load jQuery from Google APIs? Not necessary of your template already loads jQuery.">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+
+			<fieldset
+				name="advanced">
+				<field
+					name="tag_id"
+					type="text"
+					label="Menu Tag ID"
+					description="An ID attribute to assign to the root UL tag of the menu (optional)" />
+
+				<field
+					name="class_sfx"
+					type="text"
+					label="Menu Class Suffix"
+					description="A suffix to be applied to the CSS class of the menu items" />
+
+				<field
+					name="window_open"
+					type="text"
+					label="Target Position"
+					description="JavaScript values to position a popup window, e.g. top=50,left=50,width=200,height=300" />
+
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
