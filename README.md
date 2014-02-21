@@ -22,3 +22,6 @@ Update version 0.2
 The javascript code prevents a menu item that has subitems to be executed.
 When clicked on such a parent item, the javascript displays the submenu and doesn't execute the link connected to the parent item.
 To fix this, every parent item that has a submenu is cloned into the submenu as the first item.
+
+A demo of this menu is running at http://www.avgm.nl.
+Just narrow your browser screen, or view the website on a smartphone.
