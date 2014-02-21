@@ -1,7 +1,7 @@
 <?php
 /**
  * Responsive Multi Level Menu
- * Joomla 3.2.x module based on the work of Mary Lou, http://tympanus.net/codrops/2013/04/19/responsive-multi-level-menu/
+ * Joomla 3.2.x module based on the work of Mary Lou (Manoela Ilic), http://tympanus.net/codrops/2013/04/19/responsive-multi-level-menu/
  * Code based on the original Joomla Menu Module
  *
  * Copyright (C) 4 ReneKreijveld.nl, http://about.me/renekreijveld
