@@ -28,17 +28,17 @@
 					name="menutype1"
 					type="menu"
 					label="Select Menu 1"
-					description="Select a menu from the list. You can now choose 3 different menu's, these will be combined into 1 menu. If you choose a menu more than once, only the first one will be included." />
+					description="Select a menu from the list. You can now choose 3 different menu's, these will be combined into 1 menu." />
 				<field
 					name="menutype2"
 					type="menu"
 					label="Select Menu 2"
-					description="Select a menu from the list. You can now choose 3 different menu's, these will be combined into 1 menu. If you choose a menu more than once, only the first one will be included." />
+					description="Select a menu from the list. You can now choose 3 different menu's, these will be combined into 1 menu." />
 				<field
 					name="menutype3"
 					type="menu"
 					label="Select Menu 3"
-					description="Select a menu from the list. You can now choose 3 different menu's, these will be combined into 1 menu. If you choose a menu more than once, only the first one will be included." />
+					description="Select a menu from the list. You can now choose 3 different menu's, these will be combined into 1 menu." />
 				<field
 					name="whichmenu"
 					type="radio"

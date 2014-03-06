@@ -10,6 +10,10 @@ The module has the defaule menu parameters which are the same as the original Me
 
 Additionally, you can set the following parameters:
 
+- **Select Menu 1**: The first menu you want to display.
+- **Select Menu 2**: The second menu you want to display.
+- **Select Menu 3**: The third menu you want to display.
+- **Which menu to display**: Choose which menu's you want to combine into one single menu.
 - **Back text**: the text to appear on the "back" menu item when navigating into submenu's.
 - **Color Set**: choose one of the 5 predefined color sets. Or choose "Use your own".
 - **Color1**: when you choose "Use your own" as color set, choose your first color here. This color is used as the button color.
