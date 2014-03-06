@@ -17,6 +17,11 @@ Additionally, you can set the following parameters:
 - **Animation**: choose one of the five animations.
 - **Load jQuery**: specify if the module should load jQuery (from the Google API's). If your template already loads jQuery, set this parameter to "No".
 
+Update version 0.3
+
+The module now allows you to choose up to three different Joomla menu's. These will be combined into one multi level menu.
+This can be handy if you have a main menu and one or more other menu's on your desktop website. You can combine these menu's into one menu for mobile.
+
 Update version 0.2
 
 The javascript code prevents a menu item that has subitems to be executed.

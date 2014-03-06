@@ -11,7 +11,7 @@
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>email@renekreijveld.nl</authorEmail>
 	<authorUrl>about.me/renekreijveld</authorUrl>
-	<version>0.0.2</version>
+	<version>0.0.3</version>
 	<description>Respsonsive Multi Level Menu</description>
 	<files>
 		<filename module="mod_respmultilevelmenu">mod_respmultilevelmenu.php</filename>
@@ -25,10 +25,31 @@
 		<fields name="params">
 			<fieldset name="basic">
 				<field
-					name="menutype"
+					name="menutype1"
 					type="menu"
-					label="Select Menu"
-					description="Select a menu from the list" />
+					label="Select Menu 1"
+					description="Select a menu from the list. You can now choose 3 different menu's, these will be combined into 1 menu. If you choose a menu more than once, only the first one will be included." />
+				<field
+					name="menutype2"
+					type="menu"
+					label="Select Menu 2"
+					description="Select a menu from the list. You can now choose 3 different menu's, these will be combined into 1 menu. If you choose a menu more than once, only the first one will be included." />
+				<field
+					name="menutype3"
+					type="menu"
+					label="Select Menu 3"
+					description="Select a menu from the list. You can now choose 3 different menu's, these will be combined into 1 menu. If you choose a menu more than once, only the first one will be included." />
+				<field
+					name="whichmenu"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="Which menu to display"
+					description="Choose which menu's you want to combine">
+					<option value="1">Just use menu 1</option>
+					<option value="2">Use menu 1 and 2</option>
+					<option value="3">Use menu 1 and 2 and 3</option>
+				</field>
 				<field
 					name="base"
 					type="menuitem"

@@ -77,7 +77,23 @@ class ModRespMultiLevelMenuHelper
 			$start   = (int) $params->get('startLevel');
 			$end     = (int) $params->get('endLevel');
 			$showAll = $params->get('showAllChildren');
-			$items   = $menu->getItems('menutype', $params->get('menutype'));
+			if ($params->get('whichmenu') == 1)
+			{
+				$items  = $menu->getItems('menutype', $params->get('menutype1'));	
+			}
+			if ($params->get('whichmenu') == 2)
+			{
+				$items1  = $menu->getItems('menutype', $params->get('menutype1'));	
+				$items2  = $menu->getItems('menutype', $params->get('menutype2'));
+				$items = array_merge($items1, $items2);
+			}
+			if ($params->get('whichmenu') == 3)
+			{
+				$items1  = $menu->getItems('menutype', $params->get('menutype1'));	
+				$items2  = $menu->getItems('menutype', $params->get('menutype2'));
+				$items3  = $menu->getItems('menutype', $params->get('menutype3'));
+				$items = array_merge($items1, $items2, $items3);
+			}
 
 			$lastitem = 0;
 
